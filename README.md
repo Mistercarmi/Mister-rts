@@ -1,203 +1,238 @@
-# 🏰 RTS Medieval - Jeu de Stratégie en Temps Réel
+# 🏰 RTS Medieval - Jeu Mobile HTML5
 
-Un jeu de stratégie en temps réel (RTS) médiéval/fantasy complet avec interface mobile-friendly, développé avec React, FastAPI et MongoDB.
+Un jeu de stratégie en temps réel (RTS) médiéval/fantasy **100% HTML5** optimisé pour iPhone et Android, jouable directement depuis GitHub Pages.
 
-## 🎮 Aperçu du Jeu
+## 🎮 Jouer Maintenant
 
-**RTS Medieval** est un jeu d'escarmouche où vous commandez une armée médiévale contre une IA ennemie. Gérez vos ressources, construisez des bâtiments, formez des unités et conquérez vos ennemis !
+### ▶️ Accès Direct
+Cliquez simplement sur le lien GitHub Pages pour jouer immédiatement :
+**[▶️ JOUER MAINTENANT](https://votre-username.github.io/rts-medieval)**
 
-### Fonctionnalités Principales
-- ⚔️ **Combat en temps réel** contre l'IA
-- 🏗️ **Construction de bâtiments** (Hôtel de Ville, Caserne, Ferme, Mine, Écurie)
-- 👥 **Gestion d'unités** (Paysans, Soldats, Archers, Chevaliers, Mages)
-- 💰 **Système de ressources** (Or, Bois, Nourriture)
-- 📱 **Interface mobile-friendly** optimisée pour tactile
-- 🎯 **IA stratégique** qui adapte ses attaques
-- 💾 **Sauvegarde automatique** en base de données
+### 📱 Installation sur iPhone
+1. **Ouvrez Safari** et allez sur le lien ci-dessus
+2. **Appuyez sur "Partager"** (📤) en bas de l'écran
+3. **Sélectionnez "Ajouter à l'écran d'accueil"**
+4. **Nommez "RTS Medieval"** et appuyez sur "Ajouter"
+5. **Lancez depuis l'icône** sur votre écran d'accueil
 
-## 📱 Installation et Lancement Mobile
+### 📱 Installation sur Android
+1. **Ouvrez Chrome** et allez sur le lien ci-dessus
+2. **Appuyez sur le menu** (⋮) en haut à droite
+3. **Sélectionnez "Ajouter à l'écran d'accueil"**
+4. **Confirmez l'installation**
+5. **Lancez depuis l'icône** créée
 
-### Pour iPhone/iPad (iOS)
+## 🎯 Pourquoi cette version ?
 
-#### Option 1: Version Web (Recommandée)
-1. **Accès direct** : Ouvrez Safari et allez sur l'URL de déploiement
-2. **Ajouter à l'écran d'accueil** :
-   - Appuyez sur le bouton "Partager" (📤) dans Safari
-   - Sélectionnez "Ajouter à l'écran d'accueil"
-   - Nommez l'app "RTS Medieval"
-   - Appuyez sur "Ajouter"
+### ✅ Avantages
+- **Aucune installation requise** - Joue directement dans le navigateur
+- **Pas de serveur nécessaire** - Fonctionne 100% côté client
+- **Sauvegarde locale** - Vos parties sont sauvées dans le navigateur
+- **Fonctionne hors ligne** - Jouez même sans connexion
+- **Optimisé mobile** - Interface tactile parfaite pour iPhone/Android
+- **Progressive Web App** - Installable comme une vraie app
+- **Pas de compilation** - Code HTML/CSS/JavaScript pur
 
-3. **Lancez le jeu** depuis l'icône sur votre écran d'accueil
+### 🚀 Hébergement GitHub Pages
+Le jeu est automatiquement hébergé sur GitHub Pages :
+1. **Forkez** ce repository
+2. **Activez GitHub Pages** dans les paramètres
+3. **Votre jeu est en ligne** à `https://votre-username.github.io/rts-medieval`
 
-#### Option 2: Installation Locale
+## 🎮 Fonctionnalités du Jeu
+
+### 🏗️ Bâtiments
+- **🏛️ Hôtel de Ville** - Produit des paysans, génère de l'or
+- **🏰 Caserne** - Produit soldats et archers
+- **🚜 Ferme** - Génère de la nourriture
+- **⛏️ Mine** - Génère de l'or
+- **🐎 Écurie** - Produit des chevaliers
+
+### 👥 Unités
+- **👨‍🌾 Paysan** - Récolte ressources et construit
+- **⚔️ Soldat** - Combat rapproché
+- **🏹 Archer** - Combat à distance
+- **🛡️ Chevalier** - Unité lourde
+- **🧙‍♂️ Mage** - Attaques magiques
+
+### 💰 Ressources
+- **💰 Or** - Monnaie principale
+- **🪵 Bois** - Matériau de construction
+- **🍞 Nourriture** - Maintien des unités
+
+### 🤖 IA Ennemie
+- **Stratégie adaptative** - L'IA s'adapte à votre style
+- **Production automatique** - Crée des unités en continu
+- **Attaques coordonnées** - Cible vos points faibles
+
+## 🎯 Comment Jouer
+
+### 🎮 Contrôles Tactiles
+- **Tap** - Sélectionner une unité/bâtiment
+- **Tap sur case vide** - Déplacer l'unité sélectionnée
+- **Tap sur ennemi** - Attaquer la cible
+- **Boutons d'action** - Construire, produire, etc.
+
+### 📱 Interface Mobile
+- **Mode paysage recommandé** - Meilleure expérience
+- **Zones tactiles optimisées** - Boutons assez grands
+- **Notifications visuelles** - Feedback des actions
+- **Sauvegarde automatique** - Partie sauvée en continu
+
+### 🎯 Objectifs
+1. **Développez** votre base avec des bâtiments
+2. **Formez** une armée équilibrée
+3. **Gérez** vos ressources efficacement
+4. **Attaquez** et détruisez la base ennemie
+5. **Victoire** - Détruisez l'Hôtel de Ville ennemi
+
+## 📁 Structure du Projet
+
+```
+rts-medieval/
+├── index.html          # Page principale
+├── style.css           # Styles et animations
+├── app.js              # Application principale
+├── game-data.js        # Données du jeu
+├── game-logic.js       # Logique de jeu
+├── game-ui.js          # Interface utilisateur
+├── manifest.json       # Configuration PWA
+├── sw.js              # Service Worker
+└── README.md          # Ce fichier
+```
+
+## 🔧 Développement Local
+
+### Installation
 ```bash
 # 1. Clonez le repository
 git clone https://github.com/votre-username/rts-medieval.git
 cd rts-medieval
 
-# 2. Installez les dépendances
-cd frontend
-yarn install
-cd ../backend
-pip install -r requirements.txt
+# 2. Lancez un serveur local
+# Option 1: Python
+python -m http.server 8000
 
-# 3. Configurez la base de données
-# Assurez-vous d'avoir MongoDB installé localement
-# ou utilisez MongoDB Atlas (cloud)
+# Option 2: Node.js
+npx http-server
 
-# 4. Démarrez le backend
-cd backend
-uvicorn server:app --host 0.0.0.0 --port 8001
-
-# 5. Démarrez le frontend (nouveau terminal)
-cd frontend
-yarn start
-
-# 6. Accédez au jeu sur votre réseau local
-# Trouvez l'IP de votre ordinateur (ex: 192.168.1.100)
-# Sur iPhone: http://192.168.1.100:3000
+# Option 3: Live Server (VSCode)
+# Installez l'extension Live Server et cliquez "Go Live"
 ```
 
-### Pour Android
-
-#### Option 1: Version Web
-1. Ouvrez Chrome et allez sur l'URL de déploiement
-2. Appuyez sur le menu (⋮) > "Ajouter à l'écran d'accueil"
-3. Confirmez l'ajout
-4. Lancez depuis l'icône créée
-
-#### Option 2: Installation Locale
-Suivez les mêmes étapes que pour iOS, mais utilisez Chrome ou Firefox sur Android.
-
-## 🚀 Déploiement Production
-
-### Déploiement sur Emergent (Recommandé)
-1. **Connectez GitHub** dans l'interface Emergent
-2. **Sauvegardez** : Cliquez "Save to GitHub"
-3. **Déployez** : Cliquez "Deploy" puis "Deploy Now"
-4. **Partagez** l'URL générée avec vos amis
-
-### Déploiement Manuel
+### Test Mobile
 ```bash
-# Build pour production
-cd frontend
-yarn build
+# Trouvez l'IP de votre ordinateur
+ipconfig  # Windows
+ifconfig  # Mac/Linux
 
-# Déployez sur votre service préféré (Vercel, Netlify, etc.)
-# Le backend peut être déployé sur Heroku, Railway, etc.
+# Accédez depuis votre téléphone
+http://[votre-IP]:8000
 ```
 
-## 🎯 Guide de Jeu Mobile
+## 🚀 Déploiement
 
-### Contrôles Tactiles
-- **Sélection d'unité** : Appuyez sur l'unité
-- **Déplacement** : Sélectionnez une unité puis appuyez sur la destination
-- **Attaque** : Sélectionnez une unité puis appuyez sur la cible ennemie
-- **Construction** : Sélectionnez un paysan > "Construire" > choisissez le bâtiment > appuyez sur l'emplacement
-- **Production** : Appuyez sur un bâtiment > sélectionnez l'unité à produire
+### GitHub Pages (Recommandé)
+1. **Forkez** ce repository
+2. **Activez GitHub Pages** :
+   - Allez dans Settings
+   - Scroll vers GitHub Pages
+   - Source: "Deploy from a branch"
+   - Branch: "main" / "master"
+   - Folder: "/ (root)"
+3. **Votre jeu est en ligne** !
 
-### Ressources
-- **💰 Or** : Généré par les Mines et l'Hôtel de Ville
-- **🪵 Bois** : Collecté par les Paysans
-- **🍞 Nourriture** : Générée par les Fermes
+### Autres Plateformes
+- **Netlify** : Drag & drop le dossier
+- **Vercel** : Import depuis GitHub
+- **Surge.sh** : `surge .` dans le dossier
 
-### Unités
-- **👨‍🌾 Paysan** : Récolte ressources et construit bâtiments
-- **⚔️ Soldat** : Unité de combat rapproché
-- **🏹 Archer** : Unité de combat à distance
-- **🛡️ Chevalier** : Unité lourde avec beaucoup de vie
-- **🧙‍♂️ Mage** : Unité magique avec attaque puissante
+## 📱 Optimisations Mobile
 
-### Bâtiments
-- **🏛️ Hôtel de Ville** : Produit des Paysans, génère de l'Or
-- **🏰 Caserne** : Produit Soldats et Archers
-- **🚜 Ferme** : Génère de la Nourriture
-- **⛏️ Mine** : Génère de l'Or
-- **🐎 Écurie** : Produit des Chevaliers
+### Performance
+- **Pas de frameworks lourds** - HTML/CSS/JS pur
+- **Animations 60fps** - Optimisées pour mobile
+- **Service Worker** - Cache intelligent
+- **Lazy loading** - Chargement progressif
 
-## 🔧 Configuration Technique
+### Compatibilité
+- **iOS 12+** - Safari optimisé
+- **Android 7+** - Chrome optimisé
+- **PWA compliant** - Installable
+- **Responsive design** - S'adapte aux écrans
 
-### Variables d'Environnement
-```env
-# Frontend (.env)
-REACT_APP_BACKEND_URL=https://votre-backend-url.com
+### Fonctionnalités
+- **Mode hors ligne** - Jouez sans connexion
+- **Sauvegarde locale** - Vos parties persistent
+- **Notifications** - Feedback visuel
+- **Gestion d'orientation** - Paysage recommandé
 
-# Backend (.env)
-MONGO_URL=mongodb://localhost:27017
-DB_NAME=rts_medieval
-```
+## 🎮 Conseils de Jeu
 
-### Optimisations Mobile
-- **Responsive Design** : Interface adaptée aux écrans tactiles
-- **Touch-friendly** : Boutons et zones de clic optimisées
-- **Performance** : Animations fluides à 60fps
-- **PWA Ready** : Peut être installée comme une app native
+### 🏁 Début de Partie
+1. **Construisez des fermes** - Sécurisez votre nourriture
+2. **Bâtissez des mines** - Générez de l'or
+3. **Formez des paysans** - Étendez votre économie
+4. **Construisez une caserne** - Préparez la guerre
 
-## 🛠️ Structure du Projet
+### ⚔️ Stratégie
+- **Équilibrez** économie et militaire
+- **Protégez** vos bâtiments de production
+- **Diversifiez** votre armée
+- **Attaquez** les points faibles ennemis
 
-```
-rts-medieval/
-├── frontend/                 # Application React
-│   ├── src/
-│   │   ├── components/      # Composants du jeu
-│   │   ├── services/        # Services API
-│   │   ├── hooks/           # Hooks personnalisés
-│   │   └── mock/            # Données de test
-│   └── public/              # Fichiers statiques
-├── backend/                 # API FastAPI
-│   ├── models/              # Modèles de données
-│   ├── services/            # Logique métier
-│   ├── routes/              # Routes API
-│   └── server.py            # Serveur principal
-└── README.md               # Ce fichier
-```
-
-## 🎮 Conseils de Stratégie
-
-### Début de Partie
-1. **Explorez** la carte avec vos Paysans
-2. **Construisez** des Fermes pour la nourriture
-3. **Bâtissez** des Mines pour l'or
-4. **Formez** une armée équilibrée
-
-### Tactiques Avancées
-- **Micro-management** : Contrôlez individuellement vos unités
-- **Économie** : Équilibrez production et expansion
-- **Défense** : Protégez vos bâtiments de production
-- **Attaque** : Ciblez les bâtiments ennemis prioritaires
+### 🏆 Victoire
+- **Détruisez l'Hôtel de Ville** ennemi
+- **Éliminez toutes les unités** ennemies
+- **Survivez** aux attaques de l'IA
 
 ## 🐛 Dépannage
 
 ### Problèmes Courants
-- **Connexion API** : Vérifiez que le backend est démarré
-- **Ressources insuffisantes** : Construisez plus de bâtiments de production
-- **Unités qui ne répondent pas** : Rechargez la page
-- **Performance lente** : Fermez les autres applications
+- **Jeu ne se charge pas** : Rechargez la page
+- **Interface trop petite** : Tournez en mode paysage
+- **Partie non sauvée** : Vérifiez le stockage du navigateur
+- **Performances lentes** : Fermez les autres onglets
 
-### Support Mobile
-- **iPhone** : iOS 12+ et Safari
-- **Android** : Android 7+ et Chrome
-- **Connexion** : WiFi recommandé pour les meilleures performances
+### Support
+- **iPhone** : iOS 12+ avec Safari
+- **Android** : Android 7+ avec Chrome
+- **Desktop** : Chrome, Firefox, Safari, Edge
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues ! N'hésitez pas à :
-- Rapporter des bugs
-- Proposer des améliorations
-- Ajouter de nouvelles fonctionnalités
-- Améliorer l'interface mobile
+### Améliorations Possibles
+- **Nouvelles unités** - Ajoutez des types d'unités
+- **Cartes multiples** - Différents terrains
+- **Multijoueur** - Bataille entre joueurs
+- **Campagne** - Mode histoire
+- **Améliorations** - Système d'upgrades
+
+### Comment Contribuer
+1. **Forkez** le projet
+2. **Créez** une branche feature
+3. **Commitez** vos changements
+4. **Pushez** vers votre fork
+5. **Créez** une Pull Request
 
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 
-## 👨‍💻 Développé avec
+## 🎉 Crédits
 
-- **Frontend** : React, TailwindCSS, Axios
-- **Backend** : FastAPI, MongoDB, Python
-- **Mobile** : PWA, Responsive Design
-- **Déploiement** : Emergent Platform
+- **Concept** : Jeu RTS classique adapté pour mobile
+- **Développement** : HTML5, CSS3, JavaScript ES6
+- **Icônes** : Emojis natifs pour compatibilité maximale
+- **Animations** : CSS3 avec optimisations mobile
 
 ---
 
-**Amusez-vous bien et que la meilleure stratégie gagne ! ⚔️🏰**
+**🏰 Amusez-vous bien et que la meilleure stratégie gagne ! ⚔️**
+
+## 🔗 Liens Utiles
+
+- [Jouer au jeu](https://votre-username.github.io/rts-medieval)
+- [Code source](https://github.com/votre-username/rts-medieval)
+- [Signaler un bug](https://github.com/votre-username/rts-medieval/issues)
+- [Contribuer](https://github.com/votre-username/rts-medieval/pulls)
