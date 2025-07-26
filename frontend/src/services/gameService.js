@@ -23,7 +23,7 @@ class GameService {
 
   async getGame(gameId) {
     try {
-      const response = await axios.get(`${API}/${gameId}`);
+      const response = await axios.get(`${API}${gameId}`);
       return response.data;
     } catch (error) {
       console.error('Error getting game:', error);
