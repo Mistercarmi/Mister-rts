@@ -33,7 +33,7 @@ class GameService {
 
   async moveUnits(gameId, unitIds, targetX, targetY) {
     try {
-      const response = await axios.post(`${API}/${gameId}/move`, {
+      const response = await axios.post(`${API}${gameId}/move`, {
         unit_ids: unitIds,
         target_x: targetX,
         target_y: targetY
@@ -47,7 +47,7 @@ class GameService {
 
   async attackTarget(gameId, attackerId, targetId) {
     try {
-      const response = await axios.post(`${API}/${gameId}/attack`, {
+      const response = await axios.post(`${API}${gameId}/attack`, {
         attacker_id: attackerId,
         target_id: targetId
       });
@@ -60,7 +60,7 @@ class GameService {
 
   async buildBuilding(gameId, buildingType, x, y) {
     try {
-      const response = await axios.post(`${API}/${gameId}/build`, {
+      const response = await axios.post(`${API}${gameId}/build`, {
         building_type: buildingType,
         x: x,
         y: y
@@ -74,7 +74,7 @@ class GameService {
 
   async produceUnit(gameId, buildingId, unitType) {
     try {
-      const response = await axios.post(`${API}/${gameId}/produce`, {
+      const response = await axios.post(`${API}${gameId}/produce`, {
         building_id: buildingId,
         unit_type: unitType
       });
@@ -87,7 +87,7 @@ class GameService {
 
   async getPendingProductions(gameId) {
     try {
-      const response = await axios.get(`${API}/${gameId}/productions`);
+      const response = await axios.get(`${API}${gameId}/productions`);
       return response.data;
     } catch (error) {
       console.error('Error getting productions:', error);
@@ -97,7 +97,7 @@ class GameService {
 
   async updateResources(gameId) {
     try {
-      const response = await axios.post(`${API}/${gameId}/resources`);
+      const response = await axios.post(`${API}${gameId}/resources`);
       return response.data;
     } catch (error) {
       console.error('Error updating resources:', error);
@@ -107,7 +107,7 @@ class GameService {
 
   async aiTurn(gameId) {
     try {
-      const response = await axios.post(`${API}/${gameId}/ai-turn`);
+      const response = await axios.post(`${API}${gameId}/ai-turn`);
       return response.data;
     } catch (error) {
       console.error('Error executing AI turn:', error);
