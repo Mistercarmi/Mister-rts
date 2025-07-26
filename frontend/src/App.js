@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import GameScreen from "./components/GameScreen";
+import GameScreenWithBackend from "./components/GameScreenWithBackend";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<GameScreen />} />
+          <Route path="/" element={<GameScreenWithBackend />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
