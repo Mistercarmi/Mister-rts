@@ -16,7 +16,142 @@ code {
         monospace;
 }
 
+/* Optimisations mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    /* Boutons plus grands sur mobile */
+    button {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        touch-action: manipulation;
+    }
+    
+    /* Zones de jeu optimisées */
+    .game-cell {
+        min-height: 40px !important;
+        min-width: 40px !important;
+    }
+    
+    /* Prévention du zoom sur les inputs */
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+    
+    /* Amélioration des animations sur mobile */
+    * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
 
+/* Optimisations pour iPhone */
+@supports (-webkit-appearance: none) {
+    input[type="text"], input[type="email"], input[type="password"] {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+}
+
+/* Optimisations paysage mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .mobile-landscape {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .game-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .game-map {
+        flex: 1;
+        overflow: auto;
+    }
+    
+    .game-controls {
+        flex-shrink: 0;
+    }
+}
+
+/* Amélioration des performances */
+.game-map {
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prévention du scroll bounce sur iOS */
+html, body {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Curseur personnalisé pour les actions de jeu */
+.cursor-attack {
+    cursor: crosshair;
+}
+
+.cursor-build {
+    cursor: copy;
+}
+
+.cursor-move {
+    cursor: grab;
+}
+
+.cursor-move:active {
+    cursor: grabbing;
+}
+
+/* Animations optimisées */
+@keyframes pulse-gentle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.pulse-gentle {
+    animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+/* Feedback tactile */
+.touch-feedback:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* Amélioration de la visibilité sur mobile */
+@media (max-width: 768px) {
+    .text-sm {
+        font-size: 0.9rem !important;
+    }
+    
+    .text-xs {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Contraste amélioré */
+    .bg-opacity-50 {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+}
 
 @layer base {
   :root {
@@ -73,8 +208,6 @@ code {
         --chart-5: 340 75% 55%;
     }
 }
-
-
 
 @layer base {
   * {
