@@ -12,7 +12,10 @@ import asyncio
 
 router = APIRouter(prefix="/games", tags=["games"])
 
-async def get_game_service(db: AsyncIOMotorDatabase = Depends(lambda: db)) -> GameService:
+# Global db variable will be set in server.py
+db = None
+
+async def get_game_service() -> GameService:
     return GameService(db)
 
 @router.post("/", response_model=GameState)
