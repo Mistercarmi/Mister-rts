@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🏰 RTS Medieval</title>
+    <meta name="description" content="Jeu de stratégie en temps réel médiéval - Jouable directement sur iPhone/Android">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="RTS Medieval">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Écran de chargement -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="castle-icon">🏰</div>
+            <h1>RTS Medieval</h1>
+            <p>Chargement de votre royaume...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Écran de démarrage -->
+    <div id="start-screen" class="start-screen hidden">
+        <div class="start-content">
+            <h1>🏰 RTS Medieval</h1>
+            <p>Conquérez vos ennemis dans cette bataille épique !</p>
+            <input type="text" id="player-name" placeholder="Entrez votre nom" maxlength="20">
+            <button id="start-btn" class="btn-primary">⚔️ Commencer la bataille</button>
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="icon">👨‍🌾</span>
+                    <span>Gérez vos paysans</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🏗️</span>
+                    <span>Construisez des bâtiments</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">⚔️</span>
+                    <span>Formez votre armée</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🏆</span>
+                    <span>Battez l'IA ennemie</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interface de jeu -->
+    <div id="game-screen" class="game-screen hidden">
+        <!-- Header avec ressources -->
+        <div class="game-header">
+            <div class="resources">
+                <div class="resource">
+                    <span class="icon">💰</span>
+                    <span id="gold-count">500</span>
+                </div>
+                <div class="resource">
+                    <span class="icon">🪵</span>
+                    <span id="wood-count">300</span>
+                </div>
+                <div class="resource">
+                    <span class="icon">🍞</span>
+                    <span id="food-count">100</span>
+                </div>
+            </div>
+            <div class="game-controls">
+                <button id="pause-btn" class="btn-icon">⏸️</button>
+                <button id="menu-btn" class="btn-icon">☰</button>
+            </div>
+        </div>
+
+        <!-- Carte de jeu -->
+        <div id="game-map" class="game-map">
+            <div id="map-grid" class="map-grid"></div>
+        </div>
+
+        <!-- Panneau d'informations -->
+        <div id="info-panel" class="info-panel">
+            <div id="selection-info" class="selection-info">
+                <p>Sélectionnez une unité ou un bâtiment</p>
+            </div>
+        </div>
+
+        <!-- Panneau d'actions -->
+        <div id="action-panel" class="action-panel">
+            <div id="action-buttons" class="action-buttons">
+                <!-- Boutons d'action dynamiques -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu de construction -->
+    <div id="build-menu" class="build-menu hidden">
+        <div class="build-menu-content">
+            <h3>Construire</h3>
+            <div class="build-options">
+                <div class="build-option" data-building="farm">
+                    <div class="building-icon">🚜</div>
+                    <div class="building-name">Ferme</div>
+                    <div class="building-cost">💰100 🪵100</div>
+                </div>
+                <div class="build-option" data-building="mine">
+                    <div class="building-icon">⛏️</div>
+                    <div class="building-name">Mine</div>
+                    <div class="building-cost">💰150 🪵200</div>
+                </div>
+                <div class="build-option" data-building="barracks">
+                    <div class="building-icon">🏰</div>
+                    <div class="building-name">Caserne</div>
+                    <div class="building-cost">💰200 🪵150</div>
+                </div>
+                <div class="build-option" data-building="stable">
+                    <div class="building-icon">🐎</div>
+                    <div class="building-name">Écurie</div>
+                    <div class="building-cost">💰300 🪵200</div>
+                </div>
+            </div>
+            <button id="close-build-menu" class="btn-secondary">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div id="notifications" class="notifications"></div>
+
+    <!-- Menu pause -->
+    <div id="pause-menu" class="pause-menu hidden">
+        <div class="pause-content">
+            <h2>⏸️ Jeu en Pause</h2>
+            <button id="resume-btn" class="btn-primary">Reprendre</button>
+            <button id="save-btn" class="btn-secondary">Sauvegarder</button>
+            <button id="restart-btn" class="btn-danger">Recommencer</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="game-data.js"></script>
+    <script src="game-logic.js"></script>
+    <script src="game-ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
