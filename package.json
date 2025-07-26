@@ -1,0 +1,42 @@
+{
+  "name": "rts-medieval",
+  "version": "1.0.0",
+  "description": "Jeu de stratégie en temps réel médiéval avec interface mobile optimisée",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd frontend && yarn install && cd ../backend && pip install -r requirements.txt",
+    "dev": "concurrently \"cd backend && uvicorn server:app --reload --host 0.0.0.0 --port 8001\" \"cd frontend && yarn start\"",
+    "build": "cd frontend && yarn build",
+    "mobile-dev": "cd frontend && REACT_APP_MOBILE_OPTIMIZED=true yarn start",
+    "deploy": "cd frontend && yarn build && echo 'Ready for deployment'",
+    "test": "cd frontend && yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/votre-username/rts-medieval.git"
+  },
+  "keywords": [
+    "rts",
+    "medieval",
+    "strategy",
+    "game",
+    "mobile",
+    "pwa",
+    "react",
+    "fastapi",
+    "mongodb"
+  ],
+  "author": "Votre Nom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/votre-username/rts-medieval/issues"
+  },
+  "homepage": "https://github.com/votre-username/rts-medieval#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
